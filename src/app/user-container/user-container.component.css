@@ -1,0 +1,11 @@
+.container {
+    background-color: lightblue;
+    width:46vw;
+    height: 93vh;
+}
+.container1 {
+    width: 35vw;
+}
+.flex-row {
+    height:90%;
+}

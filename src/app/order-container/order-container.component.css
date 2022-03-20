@@ -1,0 +1,12 @@
+div.container {
+    width:48vw;
+    height: 93vh;
+    background-color: pink;
+}
+.container1 {
+    width: 80%;
+    height: 80%;
+}
+.w-90 {
+    width:90%;
+}
