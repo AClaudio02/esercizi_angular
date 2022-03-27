@@ -1,0 +1,4 @@
+p {
+    border:1px var(--bs-gray-500) solid; 
+    width: 25%;
+}

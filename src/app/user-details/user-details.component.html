@@ -1,0 +1,30 @@
+<div>
+  <p>Id: {{ user.id }}</p>
+  <p>Name: {{ user.name }}</p>
+  <p>Surname: {{ user.surname }}</p>
+  <p>Age: {{ user.age }}</p>
+  <p>Birth Date: {{ user.dateOfBirth | date: "yyyy-MM-dd" }}</p>
+  <p>City: {{ user.address.city }}</p>
+  <p>Street: {{ user.address.street }}</p>
+  <p>Postal Code: {{ user.address.postalCode }}</p>
+  <p>Role: {{ user.role }}</p>
+  <p>Username: {{ user.username }}</p>
+  <img
+    src="{{ user.profilePhotoUrl }}"
+    width="300px"
+    height="200px"
+    alt="User profile photo"
+  />
+  <div *ngFor="let company of user.companies; index as i">
+    <div class="border border-success w-75">
+      <p>Company Id: {{ user.companies[i].id }}</p>
+      <p>Company Name: {{ user.companies[i].name }}</p>
+      <p>Company Description: {{ user.companies[i].description }}</p>
+      <p>Company City: {{ user.companies[i].location.city }}</p>
+      <p>Company Street: {{ user.companies[i].location.street }}</p>
+      <p>Company Postal Code:{{ user.companies[i].location.postalCode }}</p>
+  </div>
+</div>
+<p>Gender: {{user.gender}}</p>
+
+
