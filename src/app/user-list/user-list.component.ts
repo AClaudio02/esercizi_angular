@@ -63,9 +63,8 @@ export class UserListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   deleteUser(index: number) {
-   return this.users.splice(index)
+   return this.users.splice(index,1)
 
    }
 
