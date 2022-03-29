@@ -1,6 +1,3 @@
 li {
-    list-style-type: "- ";
-}
-span {
-    font-weight: bold;
+    list-style-type: none;
 }

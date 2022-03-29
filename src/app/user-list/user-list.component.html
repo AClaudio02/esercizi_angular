@@ -1,6 +1,8 @@
-<div class="d-flex">
-    <ul *ngFor="let user of users;">
-        <app-user-single [user]="user"></app-user-single>
+<div class="d-flex flex-column">
+    <ul *ngFor="let user of users;index as i">
+        <li >    
+            {{i+1}}.<app-user-single [user]="user" [index]="i" (deleted)="deleteUser($event)"></app-user-single>
+        </li>
     </ul>
 
 
