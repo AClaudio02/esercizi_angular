@@ -1,4 +1,4 @@
-<div> 
+<div  class='border border-3' [ngClass]="{'border-primary': user.role == 'staff','border-success': user.role == 'manager','border-info': user.role == 'admin'}"> 
 <span><img src={{user.profilePhotoUrl}} width="20%" height="20%" alt="Profile Photo" /></span>
 <span class="bold">{{user.name}} {{user.surname}}</span> 
 <span> {{user.age}}</span>
