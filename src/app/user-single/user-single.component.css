@@ -2,5 +2,12 @@
     font-weight: bold;
 }
 span {
-    padding: 0 15px
+    padding: 0 15px;
+    width: fit-content;
+}
+div {
+    display:inline-block;
+    padding:1em 0;
+    width:20vw;
+
 }

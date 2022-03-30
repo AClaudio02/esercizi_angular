@@ -9,6 +9,7 @@ import { IUser } from '../user-list/models/IUser';
 export class UserSingleComponent implements OnInit {
   @Input() user!: IUser;
   @Input() index!: number;
+  @Input() Role!:string;
   @Output() deleted = new EventEmitter();
   constructor() { }
 
