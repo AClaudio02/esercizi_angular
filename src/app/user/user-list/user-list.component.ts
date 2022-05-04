@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
+  @Output() showDetails = new EventEmitter<boolean>();
+  
   constructor() { }
 
   ngOnInit(): void {
