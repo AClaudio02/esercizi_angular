@@ -10,14 +10,14 @@ export class CounterService {
     return this._counter;
   }
   set counter(counter) {
-    this._counter = counter;
+    counter = this._counter;
   }
 
   showCounter() {
     console.log(`Valore iniziale: ${this.counter}`);
   }
   add(number: number) {
-    this._counter += number;
+    this.counter += number;
     console.log(`Somma: ${this.counter}`);
   }
   sub(number: number) {
