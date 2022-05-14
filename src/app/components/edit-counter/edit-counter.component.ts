@@ -15,7 +15,6 @@ export class EditCounterComponent implements OnInit {
   addNumber() {
     this.counterService.add(this.number.value);
   }
-  
   subNumber() {
     this.counterService.sub(this.number.value);
   }

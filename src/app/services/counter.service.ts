@@ -1,31 +1,32 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CounterService {
-  private _counter = 0;
-
-  get counter(): number {
-    return this._counter;
-  }
-
+  private counterSubject =  new BehaviorSubject<number>(0);
 
   showCounter() {
-    console.log(`Valore iniziale: ${this._counter}`);
+    return this.counterSubject.getValue();
   }
   add(number:number) {
-    this._counter += number;
-    console.log(`Somma: ${this.counter}`);
-  }
-  sub(number: number) {
-    this._counter -= number;
-    if (this.counter < 0) {
-      console.error('Il counter non può essere minore di zero!');
-      this._counter += number;
-    } else {
-      console.log(`Sottrazione: ${this._counter}`);
-    }
-  }
+    this.counterSubject.subscribe();
+    this.counterSubject.next(this.counterSubject.getValue() + number);
+    return console.log(`Addizione: ${this.counterSubject.getValue()}`);
+
+  };
+  sub(number:number) {
+    this.counterSubject.subscribe();
+    this.counterSubject.next(this.counterSubject.getValue() - number);
+      if (this.counterSubject.getValue() < 0) {
+        console.error('Il counter non può essere minore di zero!');
+        this.counterSubject.next(this.counterSubject.getValue() + number);
+
+      } else {
+        console.log(`Sottrazione: ${this.counterSubject.getValue()}`);
+
+      }
+  }; 
   constructor() {}
 }
